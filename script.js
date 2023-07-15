@@ -89,44 +89,51 @@ function writePassword() {
   numbersArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 
-  var generatedPassArr = [lowerArr, upperArr, specialArr, numbersArr];
+
+  var lowerRandom = lowerArr[Math.floor(Math.random() * lowerArr.length)]; 
+  var upperRandom = upperArr[Math.floor(Math.random() * upperArr.length)];
+  var specialRandom = specialArr[Math.floor(Math.random() * specialArr.length)];
+  var numbersRandom = numbersArr[Math.floor(Math.random() * numbersArr.length)];
+
+  var randomArr = [lowerRandom, upperRandom, specialRandom, numbersRandom];
 
 
+function generatedPass () {
 
-  if (lowerCase === true) {
-    Math.floor(Math.random() + lowerArr.length);
-    console.log(lowerCase);
+  if (lowerCase) {
+    var lowerRandom = lowerArr[Math.floor(Math.random() * lowerArr.length)];
   } else {
 
   }
 
   if (upperCase) {
-    Math.floor(Math.random() + upperArr.length);
+    var upperRandom = upperArr[Math.floor(Math.random() * upperArr.length)];
   } else {
 
   }
-
-  if (numbers) {
-    Math.floor(Math.random() + numbersArr.length);
-  } else {
-
-  }
-
+  
   if (specialChar) {
-    Math.floor(Math.random() + specialArr.length);
+    var specialRandom = specialArr[Math.floor(Math.random() * specialArr.length)];
+  } else {
+    
+  }
+  
+  if (numbers) {
+    var numbersRandom = numbersArr[Math.floor(Math.random() * numbersArr.length)];
   } else {
 
-  }
+  };
+}
 
-  console.log(generatedPassArr.join(""));
+
+  console.log(generatedPass.join(""));
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  
   passwordText.value = password;
 
 }
-
-console.log(writePassword);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
