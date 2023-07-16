@@ -95,45 +95,36 @@ function writePassword() {
   var specialRandom = specialArr[Math.floor(Math.random() * specialArr.length)];
   var numbersRandom = numbersArr[Math.floor(Math.random() * numbersArr.length)];
 
+
   var randomArr = [];
  
 
   if (lowerCase) {
     randomArr = randomArr.concat(lowerArr)
-  } else {
-
-  }
+  } 
 
   if (upperCase) {
     randomArr = randomArr.concat(upperArr)
-  } else {
-
   }
   
   if (specialChar) {
     randomArr = randomArr.concat(specialArr)
-  } else {
-    
   }
   
   if (numbers) {
     randomArr = randomArr.concat(numbersArr)
-  } else {
-
   };
 
-//  var userInput = {
-//     lowerArr,
-//     upperArr,
-//     specialArr,
-//     numbersArr,
-//   }
 
- // so i got it to register the user input. Now I just have to figure out how to randomize the arrays
-for (i = 0; i < input; i++){
-  console.log(randomArr)
+var password = "";
+
+for (var i = 0; i < input; i++) {
+  password += randomArr[Math.floor(Math.random() * randomArr.length)];
 }
 
+// insure that that math random evenly picks the random elements from each array evenly
+
+console.log(password);
   
 
 
