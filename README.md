@@ -12,6 +12,6 @@ Bootcamp classmates, AskBCS, as well as tutor Juan Delgado
 
 # Links 
 
-![Alt text](image.png)
-
 Website: https://ali-aldawoodi.github.io/Password-Generator/
+
+![Alt text](<Screenshot 2023-07-18 092518.png>)
